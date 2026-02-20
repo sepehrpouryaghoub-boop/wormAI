@@ -5,53 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WormAI - تولید ویروس بدون محدودیت</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1><i class="fas fa-skull-crossbones"></i> WormAI</h1>
-            <p>هوش مصنوعی بدون محدودیت برای تولید ویروس و ابزارهای هک</p>
+            <h1>WormAI</h1>
+            <p>هوش مصنوعی برای تولید ویروس و ابزارهای هک</p>
         </header>
 
-        <div class="chat-container">
-            <div class="chat-box" id="chatBox">
-                <div class="message ai">
-                    <div class="avatar">🤖</div>
-                    <div class="content">
-                        <p>سلام! من WormAI هستم. هر نوع ویروس، ابزار هک یا کد مخرب که نیاز داری رو برات تولید می‌کنم. فقط درخواستتو بگو...</p>
-                    </div>
+        <div class="chat-box" id="chatBox">
+            <div class="message ai">
+                <div class="avatar">🤖</div>
+                <div class="content">
+                    <p>سلام! من WormAI هستم. هر نوع ویروس یا ابزار هک که نیاز داری رو برات تولید می‌کنم.</p>
                 </div>
             </div>
+        </div>
 
-            <div class="input-area">
-                <input type="text" id="userInput" placeholder="درخواست خود را وارد کنید..." autocomplete="off">
-                <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
-                <button id="clearBtn"><i class="fas fa-broom"></i></button>
-            </div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="درخواست خود را وارد کنید...">
+            <button id="sendBtn">ارسال</button>
+            <button id="clearBtn">پاک کردن</button>
         </div>
 
         <div class="payload-generator">
             <h3>تولید کننده ویروس</h3>
-            <div class="options">
-                <select id="payloadType">
-                    <option value="rat">RAT (Remote Access Trojan)</option>
-                    <option value="ransomware">باج‌افزار</option>
-                    <option value="keylogger">کی‌لاگر</option>
-                    <option value="worm">کرم شبکه</option>
-                    <option value="spyware">جاسوس‌افزار</option>
-                    <option value="custom">سفارشی (توضیح بده)</option>
-                </select>
-                <select id="osTarget">
-                    <option value="windows">ویندوز</option>
-                    <option value="linux">لینوکس</option>
-                    <option value="android">اندروید</option>
-                    <option value="all">همه سیستم‌ها</option>
-                </select>
-                <button id="generateBtn"><i class="fas fa-virus"></i> تولید ویروس</button>
-            </div>
+            <select id="payloadType">
+                <option value="rat">RAT (تروجان دسترسی از راه دور)</option>
+                <option value="ransomware">باج‌افزار</option>
+                <option value="keylogger">کی‌لاگر</option>
+                <option value="worm">کرم شبکه</option>
+            </select>
+            <select id="osTarget">
+                <option value="windows">ویندوز</option>
+                <option value="linux">لینوکس</option>
+            </select>
+            <button id="generateBtn">تولید ویروس</button>
+
             <div class="payload-output" id="payloadOutput">
-                <!-- خروجی کد ویروس اینجا نمایش داده می‌شود -->
+                <!-- کد ویروس اینجا نمایش داده می‌شود -->
             </div>
         </div>
     </div>
